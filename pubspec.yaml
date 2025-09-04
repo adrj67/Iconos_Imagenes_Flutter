@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  google_fonts: ^6.3.1 # Fuentes online de google
+
   flutter_dotenv: ^6.0.0 # librería para ocultar .env (donde tenemos las variables de entorno)
 
   cupertino_icons: ^1.0.8 # esta librería trae los íconos Cupertino
@@ -27,3 +29,8 @@ flutter:
   assets:
     - dev.env
     - assets/images/
+
+  fonts:
+  - family: Fruktur
+    fonts:
+      - asset: assets/fonts/Fruktur-Regular.ttf

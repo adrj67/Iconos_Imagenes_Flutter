@@ -6,6 +6,7 @@ import 'package:cloudinary_flutter/image/cld_image.dart';
 import 'package:cloudinary_flutter/cloudinary_object.dart';
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 late CloudinaryObject cloudinary;
 
@@ -15,7 +16,9 @@ https://www.youtube.com/playlist?list=PLkVpKYNT_U9frI8-qia9vN3k-V7huavBB
 
 10) https://www.youtube.com/watch?v=EWFcxoNrRGY - Imagenes
 11) https://www.youtube.com/watch?v=eBIWYzktK1U&list=PLkVpKYNT_U9frI8-qia9vN3k-V7huavBB&index=23 - Texto
-minuto 
+    - fonts.google.com/specimen/Fruktur (11:27)
+    - Fuentes online: https://pub.dev/packages/google_fonts/install
+12) https://www.youtube.com/watch?v=FlqzZmwzlPs&list=PLkVpKYNT_U9frI8-qia9vN3k-V7huavBB&index=24
       
 */
 
@@ -145,6 +148,7 @@ class _MyHomePageState extends State<MyHomePage>{
                   ),
               ],
             ),
+            /* INICIO CORTE */
             Padding(padding: EdgeInsets.all(10)),// separa las imagenes
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -172,6 +176,38 @@ class _MyHomePageState extends State<MyHomePage>{
                   publicId: "bzmro1shx1cuavvvek07.jpg",
                 ),
               ),]
+            ),
+            /* FIN CORTE */
+            Container(
+              height: 120,
+              width: MediaQuery.of(context).size.width / 1.2, //anchura del dispositivo
+              color: Colors.black,
+              child: const Text(
+                '1 Este es un texto cualquiera',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.normal,
+                  fontFamily: 'Fruktur'
+                ),
+                textAlign: TextAlign.left,
+                //TextOverflow.clip: cuando el contenedor se queda sin espacio, corta el texto.
+                //TextOverflow.elipsis: corta el texto y le agrega 3 puntos(...)
+                //TextOverflow.fade: se disfumina el texto que no entra.
+                //TextOverflow.visible: se ve el texto fuera del container.
+                overflow: TextOverflow.visible, 
+              ),
+            ),
+            Padding(padding: EdgeInsets.all(10)),
+            Text(
+              'Letras con Google fonts',
+              style: GoogleFonts.pacifico(
+                color: Colors.purple,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.end,
             ),
           ],
         ),
